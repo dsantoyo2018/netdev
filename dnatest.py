@@ -6,5 +6,5 @@ try:
   devices = dnac.devices.get_device_list()
   for device in devices.response:
     print(device['hostname']," ", device['managementIpAddress'])
-  except ApiError as e:
-    print(e)
+except ApiError as e:
+  print(e)

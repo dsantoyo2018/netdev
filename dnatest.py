@@ -4,8 +4,7 @@ dnac = api.DNACenterAPI(base_url='https://sandboxdnac2.cisco.com:443',username='
 
 try:
   devices = dnac.devices.get_device_list()
-
-for device in devices.response:
- print(device['hostname']," ", device['managementIpAddress'])
- except ApiError as e:
- print(e)
+  for device in devices.response:
+    print(device['hostname']," ", device['managementIpAddress'])
+    except ApiError as e:
+    print(e)
